@@ -1,9 +1,9 @@
 from functools import partial
 from tkinter import Frame, Label, Button, PhotoImage, Entry, LabelFrame
 
-from kafkatool.db.configuration_database import get_all_clusters, get_cluster, update_configuration, \
+from db.configuration_database import get_all_clusters, get_cluster, update_configuration, \
     insert_configuration, delete_configuration
-from kafkatool.views.topic_list_window import KafkaWindow
+from views import topic_list_window
 
 
 class ConfigurationWindow:
@@ -48,7 +48,7 @@ class ConfigurationWindow:
         self.clean_frame(self.cluster_frame)
         self.disconnect_cluster_frame(cluster_name)
         configuration = get_cluster(cluster_name)
-        self.kafka_window = KafkaWindow()
+        self.kafka_window = topic_list_window.KafkaWindow()
         self.kafka_window.open_window(configuration[0][1], configuration[0][2])
 
     def settings(self, new_cluster_name=None):

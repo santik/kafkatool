@@ -4,9 +4,9 @@ from tkinter.ttk import Treeview
 
 import pandas as pd
 
-from kafkatool.service.main_kafka import get_kafka_consumer, reset_offset
-from kafkatool.service.search_box import SearchBox
-from kafkatool.views.message_dialog import MessageDialog
+from service.main_kafka import get_kafka_consumer, reset_offset
+from service.search_box import SearchBox
+from views.message_dialog import MessageDialog
 
 
 class TopicTab:

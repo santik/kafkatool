@@ -1,0 +1,4 @@
+tkinter
+json
+kafka
+confluent_kafka

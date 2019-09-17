@@ -1,6 +1,6 @@
 from tkinter.ttk import Style
 
-from kafkatool.views.configuration_window import ConfigurationWindow
+from views import configuration_window
 
 from tkinter import Tk
 
@@ -26,7 +26,7 @@ class Main(Tk):
         style.configure("Custom.Treeview.Heading",
                         background="grey", foreground="white", relief="flat")
 
-        ConfigurationWindow()
+        configuration_window.ConfigurationWindow()
 
     def set_window_center(window, width, height):
         w_s = window.winfo_screenwidth()

@@ -1,8 +1,8 @@
 from tkinter import ttk, messagebox
 
-from kafkatool.service.list_widget import ListWidget
-from kafkatool.service.main_kafka import getTopicList
-from kafkatool.views.topic_tab import TopicTab
+from service.list_widget import ListWidget
+from service.main_kafka import getTopicList
+from views import topic_tab
 
 class KafkaWindow:
     tabsElement = None
@@ -51,7 +51,7 @@ class KafkaWindow:
             messagebox.showinfo("Tabs limit reached", "Only " + str(self.max_tabs) + " open tabs are allowed. Please close some to open new.")
             return
 
-        tab = TopicTab(self, self.server_url, topicName)
+        tab = topic_tab.TopicTab(self, self.server_url, topicName)
         tab.show(self.tabsElement)
 
         tab_name = (tab.topicName[:15] + '..') if len(tab.topicName) > 17 else tab.topicName

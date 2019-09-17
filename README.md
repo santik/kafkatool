@@ -1,12 +1,8 @@
-# kafkatool
-Tool to manage kafka topics
+# KafkaTool
 
-Requirements
+Application created for learning Python with the target to replace commercial [http://www.kafkatool.com](http://www.kafkatool.com/)
+  
+### Running
 
-* Python 3.6.
-* pandas
-* kafka
-* confluent_kafka
-
-
-Run main.py
+Simplest running is inside PyCharm.
+Just run `main.py`
