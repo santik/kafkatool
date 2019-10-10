@@ -101,12 +101,12 @@ class TopicTab:
         self.limit_entry.insert(0, self.messages_limit)
         self.limit_entry.pack(side=LEFT, ipady=1, padx=1)
 
-        close_image = PhotoImage(file="resources/images/cancel.png")
+        close_image = PhotoImage(file="resources/images/cancel.gif")
         close_button = Button(controls, image=close_image, command=lambda: self.master.destroyTab(self.topicName))
         close_button.image = close_image
         close_button.pack(side=RIGHT, ipady=1, padx=1)
 
-        refresh_image = PhotoImage(file="resources/images/reload.png")
+        refresh_image = PhotoImage(file="resources/images/reload.gif")
         refresh_button = Button(controls, image=refresh_image, command=self.refresh)
         refresh_button.image = refresh_image
         refresh_button.pack(side=RIGHT, ipady=1, padx=1)

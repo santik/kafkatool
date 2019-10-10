@@ -89,9 +89,9 @@ class ConfigurationWindow:
 
     def list_clusters_frame(self):
         configurations = get_all_clusters()
-        # connect_image = PhotoImage(file="resources/images/connect1.png")
-        # settings_image = PhotoImage(file="resources/images/settings.png")
-        # delete_image = PhotoImage(file="resources/images/delete.png")
+        connect_image = PhotoImage(file="resources/images/connect.gif")
+        settings_image = PhotoImage(file="resources/images/settings.gif")
+        delete_image = PhotoImage(file="resources/images/delete.gif")
 
         counter = 0
         for configuration in configurations:
@@ -101,43 +101,43 @@ class ConfigurationWindow:
             cluster_name_label.grid(row=counter, column=1)
 
             connect_button = Button(self.cluster_frame, text = "connect",
-                                    # image=connect_image,
+                                    image=connect_image,
                                     command=partial(self.connect, configuration_cluster_name))
-            # connect_button.image = connect_image
+            connect_button.image = connect_image
             connect_button.grid(row=counter, column=2)
 
             settings_button = Button(self.cluster_frame, text = "settings",
-                                     # image=settings_image,
+                                     image=settings_image,
                                      command=partial(self.settings, configuration_cluster_name))
-            # settings_button.image = settings_image
+            settings_button.image = settings_image
             settings_button.grid(row=counter, column=3)
 
             delete_button = Button(self.cluster_frame, text = "delete",
-                                   # image=delete_image,
+                                   image=delete_image,
                                    command=partial(self.delete, configuration_cluster_name))
-            # delete_button.image = delete_image
+            delete_button.image = delete_image
             delete_button.grid(row=counter, column=4)
 
             counter += 1
 
-        # add_image = PhotoImage(file="resources/images/add.png")
+        add_image = PhotoImage(file="resources/images/add.gif")
         add_button = Button(self.cluster_frame, text = "add",
-                            # image=add_image,
+                            image=add_image,
                             command=lambda: self.settings())
-        # add_button.image = add_image
+        add_button.image = add_image
         add_button.grid(row=counter, column=4, pady=10)
 
     def disconnect_cluster_frame(self, cluster_name):
         self.cluster_frame.pack_forget()
-        # disconnect_image = PhotoImage(file="resources/images/disconnect.png")
+        disconnect_image = PhotoImage(file="resources/images/disconnect.gif")
         cluster_name_label = Label(self.cluster_frame, text=cluster_name)
         cluster_name_label.config(font=("Arial", 12))
         cluster_name_label.grid(row=0, column=1)
 
         connect_button = Button(self.cluster_frame, text = "disconnect",
-                                # image=disconnect_image,
+                                image=disconnect_image,
                                 command=lambda: self.disconnect())
-        # connect_button.image = disconnect_image
+        connect_button.image = disconnect_image
         connect_button.grid(row=0, column=2)
 
     @staticmethod
