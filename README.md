@@ -4,5 +4,7 @@ Application created for learning Python with the target to replace commercial [h
   
 ### Running
 
+Python 3.7
+
 Simplest running is inside PyCharm.
 Just run `main.py`

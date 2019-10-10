@@ -1,4 +1,3 @@
-tkinter
-json
-kafka
+kafka-python
 confluent_kafka
+pandas
